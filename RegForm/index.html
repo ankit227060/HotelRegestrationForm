@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hotel Booking Registration</h1>
+    <form id="bookingForm">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="checkInDate">Check-in Date:</label>
+            <input type="date" id="checkInDate" name="checkInDate" required><br><br>
+            
+            <label for="totalDays">Total Days:</label>
+            <input type="number" id="totalDays" name="totalDays" min="1" required><br><br>
+            
+            <label for="totalPersons">Total Persons:</label>
+            <input type="number" id="totalPersons" name="totalPersons" min="1" required><br><br>
+            
+            <label for="advanceAmount">Advance Amount:</label>
+            <input type="number" id="advanceAmount" name="advanceAmount" min="0" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Room Info</legend>
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="Delux">Delux</option>
+                <option value="Suite">Suite</option>
+            </select><br><br>
+            
+            <label for="ac">AC:</label>
+            <input type="checkbox" id="ac" name="ac" value="AC"><br><br>
+            
+            <label for="locker">Locker:</label>
+            <input type="checkbox" id="locker" name="locker" value="Locker"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rates</legend>
+            <label for="deluxRate">Delux Room Rate:</label>
+            <input type="number" id="deluxRate" name="deluxRate" value="5000" readonly><br><br>
+            
+            <label for="suiteRate">Suite Room Rate:</label>
+            <input type="number" id="suiteRate" name="suiteRate" value="8000" readonly><br><br>
+            
+            <label for="acRate">AC Rate:</label>
+            <input type="number" id="acRate" name="acRate" value="1500" readonly><br><br>
+            
+            <label for="lockerRate">Locker Rate:</label>
+            <input type="number" id="lockerRate" name="lockerRate" value="500" readonly><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cost Summary</legend>
+            <label for="totalCost">Total Cost:</label>
+            <input type="text" id="totalCost" name="totalCost" readonly><br><br>
+            
+            <label for="balance">Balance:</label>
+            <input type="text" id="balance" name="balance" readonly><br><br>
+        </fieldset>
+
+        <button type="button" onclick="calculateCosts()">Calculate</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
